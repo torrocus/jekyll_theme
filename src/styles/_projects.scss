@@ -1,0 +1,102 @@
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 960px;
+  width: 90%;
+
+  @media only screen and (min-width: $cut) {
+    width: 80%;
+  }
+}
+
+.contents {
+  @media only screen and (min-width: $cut) {
+    margin-left: 0;
+    width: 48%;
+  }
+}
+
+.contents-right {
+  @media only screen and (min-width: $cut) {
+    float: right;
+    margin-top: -5%;
+    width: 48%;
+  }
+}
+
+.images-left {
+  @media only screen and (min-width: $cut) {
+    float: left;
+    width: 48%;
+  }
+  img {
+    @media only screen and (min-width: $cut) {
+      float: left;
+    }
+  }
+}
+
+.images-right {
+  @media only screen and (min-width: $cut) {
+    float: right;
+    width: 48%;
+  }
+  img {
+    @media only screen and (min-width: $cut) {
+      float: right;
+    }
+  }
+}
+
+.project-link {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid $main;
+  color: $main;
+  cursor: pointer;
+  display: block;
+  margin: 10px 0px;
+  outline: none;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.3s ease-out,
+              background-color 0.3s ease-out,
+              border-color 0.3s ease-out;
+  width: 100px;
+
+  &:active,
+  &:hover {
+    background-color: $purple;
+    border-color: $purple;
+    color: $white;
+    transition: color 0.3s ease-in,
+                background-color 0.3s ease-in,
+                border-color 0.3s ease-in;
+  }
+}
+
+.user-projects {
+  margin: 20px auto;
+
+  h5 {
+    margin: 0;
+  }
+
+  img {
+    border-radius: 5px;
+    height: auto;
+    max-width: 100%;
+  }
+
+  li {
+    color: $main;
+    font-size: 1.1rem;
+  }
+
+  p {
+    margin-right: 5px;
+  }
+}

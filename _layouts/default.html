@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang='{{site.meta.locale}}'>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <section id='about'>
+      {% include about.html %}
+    </section>
+    <section id='projects'>
+      {% include projects.html %}
+    </section>
+    <section id='contact-form'>
+      {% include contact_form.html %}
+    </section>
+    {{ content }}
+    {% include footer.html %}
+  </body>
+</html>

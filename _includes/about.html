@@ -1,0 +1,25 @@
+<div class='user-details'>
+  <h2>{{site.user_details.headline}}</h2>
+  <p class='user-description'>{{site.user_details.description}}</p>
+</div>
+<div class='user'>
+  {% for tech in site.about.sections %}
+  {% assign section_name = tech[0] %}
+  <div class='tech {{section_name}}'>
+    <h3>{{ site.about.sections[section_name].headline }}</h3>
+    <div class='flex-container'>
+    {% for icon_name in site.about.sections[section_name].icons %}
+      {% if site.about.settings.icon_format == 'svg' %}
+        {% assign icon_array = icon_name | split: '-' %}
+        {% assign base_name = icon_array.first %}
+        <img alt='{{ base_name }}' src='assets/icons/{{ base_name }}/{{ icon_name }}.svg' title='{{ base_name }}' width='{{ site.about.settings.icon_width }}'>
+      {% else %}
+        {% assign icon_class_name = icon_name | replace: 'original', 'plain' %}
+        <i class='devicon-{{ icon_class_name }} colored'></i>
+      {% endif %}
+    {% endfor %}
+    </div>
+    <p class='tech-description'>{{ site.about.sections[section_name].description }}</p>
+  </div>
+  {% endfor %}
+</div>

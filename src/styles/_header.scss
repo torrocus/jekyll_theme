@@ -1,0 +1,127 @@
+#particles-js {
+  background: $main;
+  display: flex;
+  vertical-align: bottom;
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .particles-js-canvas-el {
+    width:100% !important;
+    height:100vh !important;
+  }
+}
+
+.down {
+  bottom: 25px;
+  color: $white;
+  cursor: pointer;
+  display: block;
+  font-size: 30px;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+
+  .icon {
+    -webkit-animation: pulse 1.3s infinite;
+            animation: pulse 1.3s infinite;
+    fill: $white;
+    height: 100px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 100px;
+
+    &:active,
+    &:hover {
+      color: $sec;
+    }
+  }
+}
+
+.header {
+  color: $white;
+  left: 50%;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+
+  .site-description {
+    color: $white;
+    display: block;
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 10px;
+
+    @media only screen and (min-width:$cut){
+      font-size: 40px;
+    }
+  }
+
+  .site-title {
+    color: $white;
+    display: block;
+    font-size: 50px;
+    line-height: 1;
+
+    @media only screen and (min-width:$cut){
+      font-size: 100px;
+      margin: 0;
+    }
+  }
+}
+
+.header-icons {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  .icon {
+    border-radius: 50%;
+    border: 2px solid $white;
+    color: $white;
+    font-size: 20px;
+    height: 20px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    transition: all .7s;
+    width: 20px;
+
+    &:active,
+    &:hover {
+      color: $main;
+      background: $white;
+    }
+
+    @media only screen and (min-width:$cut) {
+      font-size: 35px;
+      height: 35px;
+      width: 35px;
+    }
+  }
+}
+
+.header-links {
+  margin: 10px;
+  .link {
+    color: $white;
+    font-size: 15px;
+    margin: 10px;
+    text-decoration: none;
+
+    @media only screen and (min-width:$cut){
+      font-size: 20px;
+    }
+  }
+}
