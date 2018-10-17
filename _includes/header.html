@@ -29,6 +29,8 @@
       <a aria-label='My Twitter' class='u-url' href='https://twitter.com/{{ site.user_profiles.twitter }}' rel='nofollow noopener' target='_blank'><i class='icon fa fa-twitter' aria-hidden='true'></i></a>
 {% endif %}{% if site.user_profiles.youtube %}
       <a aria-label='My YouTube' class='u-url' href='https://youtube.com/channel/{{ site.user_profiles.youtube }}' rel='nofollow noopener' target='_blank'><i class='icon fa fa-youtube' aria-hidden='true'></i></a>
+{% endif %}{% if site.links.blog %}
+      <a aria-label='My Blog' class='u-url' href='{{ site.links.blog.url }}' target='_blank' title='{{ site.links.blog.title }}'><i class='icon fa fa-wordpress' aria-hidden='true'></i></a>
 {% endif %}
     </div>
     <div class='header-links'>
