@@ -7,4 +7,5 @@
   <meta content='width=device-width, initial-scale=1' name='viewport' />
   {% if site.meta.manifest_file %}<link href='{{ site.meta.manifest_file }}' rel='manifest' />{% endif %}
   <link href="{{ "/assets/css/main.css" | prepend: site.baseurl }}" media='all' rel='stylesheet' />
+  {% include google-analytics.html %}
 </head>
