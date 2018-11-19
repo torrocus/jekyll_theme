@@ -6,16 +6,8 @@
 <section id='about'>
   {% include about.html %}
 </section>
-{% if site.projects %}
-<section id='projects'>
-  {% include projects.html %}
-</section>
-{% endif %}
-{% if site.user.email %}
-<section id='contact-form'>
-  {% include contact_form.html %}
-</section>
-{% endif %}
+{% include projects.html %}
+{% include contact_form.html %}
 {{ content }}
 {% include footer.html %}
 </body>

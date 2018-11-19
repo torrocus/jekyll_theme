@@ -7,6 +7,8 @@ function encryptEmailAddress() {
   element.innerHTML = html + element.innerHTML;
 }
 
-detectUserActivity(document, window, encryptEmailAddress, 3);
+window.addEventListener('load', function(){
+  dua(document, window, encryptEmailAddress, 3);
+}, false);
 </script>
 {% endif %}

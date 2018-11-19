@@ -1,5 +1,5 @@
-function detectUserActivity(document, window, methodAfterUserActivity, minimumNumberOfUserActivity) {
-  const eventNames = [
+function dua(document, window, methodAfterUserActivity, minimumNumberOfUserActivity) {
+  var eventNames = [
     'DOMMouseScroll',
     'keypress',
     'mousedown',
@@ -8,8 +8,8 @@ function detectUserActivity(document, window, methodAfterUserActivity, minimumNu
     'MSPointerMove',
     'touchmove'
   ];
-  let object = document;
-  let userActivityCounter = 0;
+  var object = document;
+  var userActivityCounter = 0;
 
   function markUserActivity(event) {
     userActivityCounter += 1;
@@ -21,13 +21,13 @@ function detectUserActivity(document, window, methodAfterUserActivity, minimumNu
 
   function setupUserActivity(object, method) {
     for (var i = 0; i < eventNames.length; i++) {
-      object.addEventListener(eventNames[i], method, false);
+      object.addEventListener(eventNames[i], method, { passive: true });
     }
   }
 
   function resetUserActivity(object, method) {
     for (var i = 0; i < eventNames.length; i++) {
-      object.removeEventListener(eventNames[i], method, false);
+      object.removeEventListener(eventNames[i], method, { passive: true });
     }
   }
 
