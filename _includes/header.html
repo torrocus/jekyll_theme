@@ -4,9 +4,12 @@
       <span class='p-name site-title' itemprop='name'>{{site.user.name}}</span>
       <span class='p-job-title site-description' itemprop='jobTitle'>{{site.user.title}}</span>
     </h1>
-    <div class='header-icons'>
-{% if site.user.email %}
-      <a aria-label='Send email' class='u-email' href='mailto:{{site.user.email}}'><i class='icon fa fa-envelope'></i></a>
+    <div class='header-icons' id='container-of-links'>
+{% include encrypted_email.html %}
+{% if site.links.blog %}
+      <a aria-label='My Blog' class='u-url' href='{{ site.links.blog.url }}' target='_blank' title='{{ site.links.blog.title }}'><i class='icon fa fa-wordpress' aria-hidden='true'></i></a>
+{% endif %}{% if site.user_profiles.linkedin %}
+      <a aria-label='My Linked In' class='u-url' href='https://linkedin.com/in/{{ site.user_profiles.linkedin }}' rel='nofollow noopener' target='_blank'><i class='icon fa fa-linkedin' aria-hidden='true'></i></a>
 {% endif %}{% if site.user_profiles.bitbucket %}
       <a aria-label='My BitBucket' class='u-url' href='https://bitbucket.org/{{ site.user_profiles.bitbucket }}' rel='nofollow noopener' target='_blank'><i class='icon fa fa-bitbucket' aria-hidden='true'></i></a>
 {% endif %}{% if site.user_profiles.facebook %}
@@ -19,8 +22,6 @@
       <a aria-label='My Google Plus' class='u-url' href='https://plus.google.com/+{{ site.user_profiles.google_plus }}' rel='nofollow noopener' target='_blank'><i class='icon fa fa-google-plus' aria-hidden='true'></i></a>
 {% endif %}{% if site.user_profiles.instagram %}
       <a aria-label='My Instagram' class='u-url' href='https://instagram.com/{{ site.user_profiles.instagram }}' rel='nofollow noopener' target='_blank'><i class='icon fa fa-instagram' aria-hidden='true'></i></a>
-{% endif %}{% if site.user_profiles.linkedin %}
-      <a aria-label='My Linked In' class='u-url' href='https://linkedin.com/in/{{ site.user_profiles.linkedin }}' rel='nofollow noopener' target='_blank'><i class='icon fa fa-linkedin' aria-hidden='true'></i></a>
 {% endif %}{% if site.user_profiles.stackoverflow_id %}
 <!--
       <a aria-label='My Stack Overflow' class='u-url' href='https://stackoverflow.com/users/{{ site.user_profiles.stackoverflow_id }}' rel='nofollow noopener' target='_blank'><i class='icon fa fa-stackoverflow' aria-hidden='true'></i></a>
@@ -29,8 +30,6 @@
       <a aria-label='My Twitter' class='u-url' href='https://twitter.com/{{ site.user_profiles.twitter }}' rel='nofollow noopener' target='_blank'><i class='icon fa fa-twitter' aria-hidden='true'></i></a>
 {% endif %}{% if site.user_profiles.youtube %}
       <a aria-label='My YouTube' class='u-url' href='https://youtube.com/channel/{{ site.user_profiles.youtube }}' rel='nofollow noopener' target='_blank'><i class='icon fa fa-youtube' aria-hidden='true'></i></a>
-{% endif %}{% if site.links.blog %}
-      <a aria-label='My Blog' class='u-url' href='{{ site.links.blog.url }}' target='_blank' title='{{ site.links.blog.title }}'><i class='icon fa fa-wordpress' aria-hidden='true'></i></a>
 {% endif %}
     </div>
     <div class='header-links'>

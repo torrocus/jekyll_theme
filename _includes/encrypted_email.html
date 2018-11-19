@@ -1,0 +1,12 @@
+{% if site.user.encrypted_email_address %}
+<script>
+function encryptEmailAddress() {
+  let email = atob('{{site.user.encrypted_email_address}}');
+  let element = document.getElementById('container-of-links');
+  let html = "<a aria-label='Send email' class='u-email' href='mailto:" + email + "'><i class='icon fa fa-envelope'></i></a>";
+  element.innerHTML = html + element.innerHTML;
+}
+
+detectUserActivity(document, window, encryptEmailAddress, 3);
+</script>
+{% endif %}
