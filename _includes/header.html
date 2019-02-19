@@ -8,6 +8,8 @@
 {% include encrypted_email.html %}
 {% if site.links.blog %}
       <a aria-label='My Blog' class='u-url' href='{{ site.links.blog.url }}' target='_blank' title='{{ site.links.blog.title }}'><i class='icon fa fa-wordpress' aria-hidden='true'></i></a>
+{% endif %}{% if site.links.cv %}
+      <a aria-label='My Resume' class='u-url' href='{{ site.links.cv.url }}' target='_blank' title='{{ site.links.cv.title }}'><i class='icon fa fa-file' aria-hidden='true'></i></a>
 {% endif %}{% if site.user_profiles.linkedin %}
       <a aria-label='My Linked In' class='u-url' href='https://linkedin.com/in/{{ site.user_profiles.linkedin }}' rel='nofollow noopener' target='_blank'><i class='icon fa fa-linkedin' aria-hidden='true'></i></a>
 {% endif %}{% if site.user_profiles.bitbucket %}
