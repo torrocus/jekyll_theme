@@ -1,0 +1,5 @@
+{% if site.web_analytics.clicky_id %}
+<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push({{ site.web_analytics.clicky_id }});</script>
+<script async src="//static.getclicky.com/js"></script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/{{ site.web_analytics.clicky_id }}ns.gif" /></p></noscript>
+{% endif %}
